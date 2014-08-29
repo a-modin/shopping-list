@@ -29,7 +29,7 @@ function add(){
 
 // Удаление записи
 function iClose(){
-	event.target.parentNode.innerHTML = '';
+	event.target.parentNode.remove();
 };
 
 function cookieShow (){
