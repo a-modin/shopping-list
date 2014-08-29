@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<title>ToDo</title>
+	
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+	
+	<script src="jquery-2.1.s1.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="script.js"/></script>
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-12-xs">
+			<h1>Список продуктов</h1>
+			<div class="input form-group has-feedback">
+				<input id="message" class="message form-control" type="text">
+				<span id="btnsubmit" class="but-add glyphicon glyphicon-plus form-control-feedback" onclick="add()" type="button"></span>
+			</div>
+
+			<div id="messageWrapper" class="messageWrapper">
+
+			</div>
+
+			<button class="btn btn-default" onclick="cookieShow()">Показать куки</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>
