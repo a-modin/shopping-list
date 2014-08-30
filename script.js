@@ -12,7 +12,7 @@ function add(){
 	var message = document.getElementById('message').value,
 		messageWrapper = document.getElementById('messageWrapper'),
 		butClose = "<span class='but-del glyphicon glyphicon-remove-sign' onclick='iClose()'></span>",
-		butCheck = "<span class='but-check glyphicon glyphicon-remove-sign' onclick='iCheck()'></span>"
+		butCheck = "<span class='but-check glyphicon glyphicon-ok' onclick='iCheck()'></span>"
 		ticket = {
 			mes: message,
 		};
@@ -24,9 +24,8 @@ function add(){
 	}
 	else{
 	messageWrapper.innerHTML += "<div id='mess' class='mess'>" + butCheck + ticket.mes + butClose + "</div>";
-	}
+	};
 
-	
 	document.getElementById('message').value = '';
 };
 
@@ -45,6 +44,4 @@ function iCheck(){
 	else {
 		ticket.style.opacity =0.2;
 	};
-
-	
 };

@@ -47,9 +47,9 @@ h1{
 .but-add{
 	color: #6b6b6b;
 	-webkit-transition: color 0.3s ease-out 0s;
-     -moz-transition: color 0.3s ease-out 0s;
-     -o-transition: color 0.3s ease-out 0s;
-     transition: color 0.3s ease-out 0s;
+	-moz-transition: color 0.3s ease-out 0s;
+	-o-transition: color 0.3s ease-out 0s;
+	transition: color 0.3s ease-out 0s;
 }
 
 .but-add:hover{
@@ -58,5 +58,32 @@ h1{
 
 .but-del{
 	color: red;
+	opacity: 0.4;
+	-webkit-transition: opacity 0.3s ease-out 0s;
+	-moz-transition: opacity 0.3s ease-out 0s;
+	-o-transition: opacity 0.3s ease-out 0s;
+	transition: opacity 0.3s ease-out 0s;
+}
+
+.but-del:hover{
+	opacity: 1;
+}
+
+.but-check{
+	color: #4eff00;
+	float: left;
+	font-size: 23px;
+	margin-top: 10px;
+	cursor: pointer;
+	opacity: 0.4;
+	-webkit-transition: opacity 0.3s ease-out 0s;
+	-moz-transition: opacity 0.3s ease-out 0s;
+	-o-transition: opacity 0.3s ease-out 0s;
+	transition: opacity 0.3s ease-out 0s;
+
+}
+
+.but-check:hover{
+	opacity: 1;
 }
 
