@@ -1,8 +1,13 @@
+body{
+	background-image: url('http://subtlepatterns.com/patterns/navy_blue.png');
+}
+
 h1{
 	font-family: 'Ubuntu Condensed', sans-serif;
 	font-size: 30px;
 	font-weight: normal;
 	position: relative;
+	color: #fff;
 }
 
 .ticketsAmount{
@@ -11,6 +16,10 @@ h1{
 	font-weight: normal;
 	position: absolute;
 	top: -10px;
+}
+
+.badge{
+	background-color: red !important;
 }
 
 .message{
@@ -40,6 +49,10 @@ h1{
 	text-indent: 10px;
 	border-top:1px solid #ededed;
 	opacity: 1;
+	background: #fff;
+	font-size: 20px;
+	height: 40px;
+	padding-top: 7px; 
 }
 
 .but-add, .but-del{
@@ -83,7 +96,7 @@ h1{
 	color: #4eff00;
 	float: left;
 	font-size: 23px;
-	margin-top: 10px;
+	margin-top: 0;
 	cursor: pointer;
 	opacity: 0.4;
 	-webkit-transition: opacity 0.3s ease-out 0s;
@@ -99,6 +112,5 @@ h1{
 
 .del-all{
 	margin-top: 30px;
-	width: 50%;
 }
 

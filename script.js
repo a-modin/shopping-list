@@ -1,3 +1,4 @@
+// Счетчик колличества добавленных продуктов
 var i;
 i = 0;
 
@@ -16,13 +17,12 @@ function add(){
 		messageWrapper = document.getElementById('messageWrapper'),
 		butClose = "<span class='but-del glyphicon glyphicon-remove-sign' onclick='iClose()'></span>",
 		butCheck = "<span class='but-check glyphicon glyphicon-ok' onclick='iCheck()'></span>"
-		ticketsAmount = document.getElementById('ticketsAmount');
 		ticket = {
-			mes: message,
+			name: message,
+			check: butCheck,
+			close: butClose,
 		};
-
 	document.getElementById("delAll").disabled = false;
-
 	if (message === ""){
 		alert ('Введите название продукта');
 	}
@@ -32,22 +32,20 @@ function add(){
 	else{
 		i++;
 		ticketsAmount.innerHTML = i;
-		messageWrapper.innerHTML += "<div id='mess' class='mess'>" + butCheck + ticket.mes + butClose + "</div>";
+		messageWrapper.innerHTML += "<div id='mess' class='mess'>" + ticket.check + ticket.name + ticket.close + "</div>";
 	};
-
 	document.getElementById('message').value = '';
 };
 
 // Выбор записи (галка)
 function iCheck(){
 	var ticket = event.target.parentNode;
-
 	if (ticket.style.opacity === "0.2" ) {
 		ticket.style.opacity =  1;
 	}
 	else {
 		ticket.style.opacity =0.2;
-	}
+	};
 };
 
 // Удаление записи
@@ -57,6 +55,7 @@ function iClose(){
 	ticketsAmount.innerHTML = i;
 	if (i===0){
 		document.getElementById("delAll").disabled = true;
+		ticketsAmount.innerHTML = "СПИСОК ПУСТ";
 	};
 };
 
