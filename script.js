@@ -21,6 +21,7 @@ function add(){
 			mes: message,
 		};
 
+	document.getElementById("delAll").disabled = false;
 
 	if (message === ""){
 		alert ('Введите название продукта');
@@ -54,6 +55,9 @@ function iClose(){
 	event.target.parentNode.remove();
 	i--;
 	ticketsAmount.innerHTML = i;
+	if (i===0){
+		document.getElementById("delAll").disabled = true;
+	};
 };
 
 //Удаление всех записей
@@ -62,5 +66,6 @@ function delAll (){
 		document.getElementById('messageWrapper').innerHTML = '';
 		i = 0;
 		ticketsAmount.innerHTML = "СПИСОК ПУСТ";
+		document.getElementById("delAll").disabled = true;
 	}
 };

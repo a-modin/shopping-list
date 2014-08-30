@@ -29,8 +29,12 @@
 			<div id="messageWrapper" class="messageWrapper">
 
 			</div>
-			<button class="btn btn-danger del-all" onclick="delAll()">Удалить все <!-- <span class="badge">42</span> --></button>
-			
+
+			<div class="btn-group">
+				<button class="btn btn-success del-all" onclick="delAll()" disabled="disabled">Удалить отмеченные <!-- <span class="badge">42</span> --></button>
+				<button class="btn btn-danger del-all" id="delAll" onclick="delAll()" disabled="disabled">Удалить все <!-- <span class="badge">42</span> --></button>
+			</div>
+
 		</div>
 	</div>
 </div>
