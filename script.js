@@ -1,9 +1,12 @@
+var i;
+i = 0;
+
 // Нажатие клавиши Enter
 function kp(e) {
 	if (e) keyCode = e.which
 	else if (event) keyCode=event.keyCode
 	else return
-	if (keyCode == 13 ) document.getElementById("btnsubmit").click()
+	if (keyCode == 13) document.getElementById("btnsubmit").click()
 }
 document.onkeypress=kp;
 
@@ -13,9 +16,12 @@ function add(){
 		messageWrapper = document.getElementById('messageWrapper'),
 		butClose = "<span class='but-del glyphicon glyphicon-remove-sign' onclick='iClose()'></span>",
 		butCheck = "<span class='but-check glyphicon glyphicon-ok' onclick='iCheck()'></span>"
+		ticketsAmount = document.getElementById('ticketsAmount');
 		ticket = {
 			mes: message,
 		};
+
+
 	if (message === ""){
 		alert ('Введите название продукта');
 	}
@@ -23,7 +29,9 @@ function add(){
 		alert ('Не надо(( Опять нажрешься, как в тот раз(')
 	}
 	else{
-	messageWrapper.innerHTML += "<div id='mess' class='mess'>" + butCheck + ticket.mes + butClose + "</div>";
+		i++;
+		ticketsAmount.innerHTML = i;
+		messageWrapper.innerHTML += "<div id='mess' class='mess'>" + butCheck + ticket.mes + butClose + "</div>";
 	};
 
 	document.getElementById('message').value = '';
@@ -44,13 +52,15 @@ function iCheck(){
 // Удаление записи
 function iClose(){
 	event.target.parentNode.remove();
+	i--;
+	ticketsAmount.innerHTML = i;
 };
 
 //Удаление всех записей
 function delAll (){
 	if (confirm('Очистить список?')){
-		document.getElementById('messageWrapper').innerHTML = 'Список пуст. Добавьте продукты';
+		document.getElementById('messageWrapper').innerHTML = '';
+		i = 0;
+		ticketsAmount.innerHTML = "СПИСОК ПУСТ";
 	}
-	
 };
-

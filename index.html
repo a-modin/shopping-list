@@ -20,7 +20,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-12-xs">
-			<h1>Список продуктов</h1>
+			<h1>СПИСОК ПРОДУКТОВ <span class="badge ticketsAmount" id="ticketsAmount">СПИСОК ПУСТ</span></h1>
 			<div class="input form-group has-feedback">
 				<input id="message" class="message form-control" type="text">
 				<span id="btnsubmit" class="but-add glyphicon glyphicon-plus form-control-feedback" onclick="add()" type="button"></span>
@@ -29,7 +29,8 @@
 			<div id="messageWrapper" class="messageWrapper">
 
 			</div>
-			<button class="btn btn-default" onclick="delAll()">Очистить все</button>
+			<button class="btn btn-danger del-all" onclick="delAll()">Удалить все <!-- <span class="badge">42</span> --></button>
+			
 		</div>
 	</div>
 </div>
