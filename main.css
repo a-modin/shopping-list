@@ -103,7 +103,6 @@ h1{
 	-moz-transition: opacity 0.3s ease-out 0s;
 	-o-transition: opacity 0.3s ease-out 0s;
 	transition: opacity 0.3s ease-out 0s;
-
 }
 
 .but-check:hover{
@@ -111,6 +110,6 @@ h1{
 }
 
 .del-all{
-	margin-top: 30px;
+	margin-top: 15px;
 }
 
