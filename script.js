@@ -12,6 +12,7 @@ function add(){
 	var message = document.getElementById('message').value,
 		messageWrapper = document.getElementById('messageWrapper'),
 		butClose = "<span class='but-del glyphicon glyphicon-remove-sign' onclick='iClose()'></span>",
+		butCheck = "<span class='but-check glyphicon glyphicon-remove-sign' onclick='iCheck()'></span>"
 		ticket = {
 			mes: message,
 		};
@@ -22,8 +23,10 @@ function add(){
 		alert ('Не надо(( Опять нажрешься, как в тот раз(')
 	}
 	else{
-	messageWrapper.innerHTML += "<div id='mess' class='mess'>" + ticket.mes + butClose + "</div>";
+	messageWrapper.innerHTML += "<div id='mess' class='mess'>" + butCheck + ticket.mes + butClose + "</div>";
 	}
+
+	
 	document.getElementById('message').value = '';
 };
 
@@ -32,6 +35,16 @@ function iClose(){
 	event.target.parentNode.remove();
 };
 
-function cookieShow (){
-	alert (document.cookie);
+// Выбор записи (галка)
+function iCheck(){
+	var ticket = event.target.parentNode;
+
+	if (ticket.style.opacity === "0.2" ) {
+		ticket.style.opacity =  1;
+	}
+	else {
+		ticket.style.opacity =0.2;
+	};
+
+	
 };

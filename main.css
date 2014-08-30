@@ -29,6 +29,7 @@ h1{
 	position: relative;
 	text-indent: 10px;
 	border-top:1px solid #ededed;
+	opacity: 1;
 }
 
 .but-add, .but-del{
