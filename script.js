@@ -29,11 +29,6 @@ function add(){
 	document.getElementById('message').value = '';
 };
 
-// Удаление записи
-function iClose(){
-	event.target.parentNode.remove();
-};
-
 // Выбор записи (галка)
 function iCheck(){
 	var ticket = event.target.parentNode;
@@ -45,3 +40,14 @@ function iCheck(){
 		ticket.style.opacity =0.2;
 	};
 };
+
+// Удаление записи
+function iClose(){
+	event.target.parentNode.remove();
+};
+
+//Удаление всех записей
+function delAll (){
+	document.getElementById('messageWrapper').innerHTML = '';
+};
+
