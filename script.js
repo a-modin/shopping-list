@@ -47,7 +47,7 @@ function iCheck(){
 	}
 	else {
 		ticket.style.opacity =0.2;
-	};
+	}
 };
 
 // Удаление записи
@@ -61,7 +61,7 @@ function iClose(){
 };
 
 //Удаление всех записей
-function delAll (){
+function delAll(){
 	if (confirm('Очистить список?')){
 		document.getElementById('messageWrapper').innerHTML = '';
 		i = 0;
