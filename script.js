@@ -48,6 +48,9 @@ function iClose(){
 
 //Удаление всех записей
 function delAll (){
-	document.getElementById('messageWrapper').innerHTML = '';
+	if (confirm('Очистить список?')){
+		document.getElementById('messageWrapper').innerHTML = 'Список пуст. Добавьте продукты';
+	}
+	
 };
 
